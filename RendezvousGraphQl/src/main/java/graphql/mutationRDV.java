@@ -24,11 +24,11 @@ public class mutationRDV implements GraphQLRootResolver{
 		
 	}
 	
-/*	public boolean addRendezVous(RendezVous rendezVous) {
-		return rdvRepos.addRendezVous(rendezVous);
+	public boolean addRendezVous(int id,String date,String heure,String numTel){
+		return rdvRepos.addRendezVous(new RendezVous(id,date,heure,numTel));
 	}
 	
-	public boolean updateRendezVous(RendezVous rendezVous) {
+	/*public boolean updateRendezVous(RendezVous rendezVous) {
 		return rdvRepos.updateRendezVous(rendezVous);
 	}
 	

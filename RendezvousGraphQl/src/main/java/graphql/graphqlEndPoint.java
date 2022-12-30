@@ -27,7 +27,7 @@ public class graphqlEndPoint extends SimpleGraphQLServlet{
 	return SchemaParser.newParser().file("schema.graphql")
 	.resolvers(new queryRDV(rdvRepo,logementRepo))
 	.build().makeExecutableSchema();
-	
+	//,new mutationRDV(rdvRepo,logementRepo)
 }
 	
 	//,new mutationRDV(rdvRepo,logementRepo)

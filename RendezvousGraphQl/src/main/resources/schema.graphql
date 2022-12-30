@@ -3,6 +3,7 @@ type Logement {
   adresse: String
   gouvernorat: String
   description: String
+  delegation:String
   prix:Float
   type: Type
 }
@@ -18,17 +19,22 @@ type RendezVous {
 	id:Int
 	date: String
 	heure: String
-	logement:Logement
+	
 	numTel: String
 }
 type queryRDV{
 
 getListeRendezVous:[RendezVous]
-
-
+findAllLogements:[Logement]
+findLogementsByType( type:Type):[Logement]
+getLogementsByReference(reference:Int):Logement
+getListeRendezVousByLogementRef(reference:Int):[RendezVous]
+getLogementByRDV(idRDV:Int):Logement
 }
+
 
 schema{
 query:queryRDV
+
 
 }

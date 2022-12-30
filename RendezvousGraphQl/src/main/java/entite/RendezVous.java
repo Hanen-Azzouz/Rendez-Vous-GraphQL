@@ -22,7 +22,13 @@ public class RendezVous {
 		this.logement = logement;
 		this.numTel = numTel;
 	}
-
+	public RendezVous(int id, String date, String heure, String numTel) {
+		super();
+		this.id=id;
+		this.date = date;
+		this.heure = heure;
+		this.numTel = numTel;
+	}
 	public int getId() {
 		return id;
 	}
